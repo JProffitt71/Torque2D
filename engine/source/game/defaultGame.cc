@@ -58,6 +58,7 @@
 #include "platform/nativeDialogs/msgBox.h"
 #include "platform/nativeDialogs/fileDialog.h"
 #include "memory/safeDelete.h"
+#include "2d/scene/SceneEventManager.h"
 
 #include <stdio.h>
 
@@ -598,7 +599,11 @@ iPhoneProfilerStart("SERVER_PROC");
 #ifdef TORQUE_OS_IOS_PROFILE
     iPhoneProfilerStart("CLIENT_PROC");
 #endif
-
+    
+    // Execute scene events before
+    // all scenegraphs have updated
+    SceneEventManager::executeEvents();
+    
    PROFILE_START(TickableAdvanceTime);
    Tickable::advanceTime(elapsedTime);	
    PROFILE_END();

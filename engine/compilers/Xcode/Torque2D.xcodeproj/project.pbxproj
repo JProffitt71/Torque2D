@@ -447,6 +447,7 @@
 		86D770C3165687450046D71F /* osxFileDialogs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8609FE3216556F22004662ED /* osxFileDialogs.mm */; };
 		86EA5B401678C7C700598E68 /* osxCocoaUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 86EA5B3F1678C7C700598E68 /* osxCocoaUtilities.mm */; };
 		86EC5AC7165C1E0100757872 /* osxTorqueView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 86EC5AC6165C1E0100757872 /* osxTorqueView.mm */; };
+		8B8B948316EEF83400EAFBE0 /* SceneEventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B948116EEF83400EAFBE0 /* SceneEventManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1335,6 +1336,8 @@
 		86EA5B3F1678C7C700598E68 /* osxCocoaUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = osxCocoaUtilities.mm; sourceTree = "<group>"; };
 		86EC5AC5165C1E0100757872 /* osxTorqueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osxTorqueView.h; sourceTree = "<group>"; };
 		86EC5AC6165C1E0100757872 /* osxTorqueView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = osxTorqueView.mm; sourceTree = "<group>"; };
+		8B8B948116EEF83400EAFBE0 /* SceneEventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneEventManager.cpp; sourceTree = "<group>"; };
+		8B8B948216EEF83400EAFBE0 /* SceneEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneEventManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1910,6 +1913,8 @@
 				86BC7EB016518D4600D96ADF /* SceneRenderQueue.h */,
 				86BC7EB116518D4600D96ADF /* SceneRenderRequest.h */,
 				86BC7EB216518D4600D96ADF /* SceneRenderState.h */,
+				8B8B948116EEF83400EAFBE0 /* SceneEventManager.cpp */,
+				8B8B948216EEF83400EAFBE0 /* SceneEventManager.h */,
 				86BC7EB316518D4600D96ADF /* WorldQuery.cc */,
 				86BC7EB416518D4600D96ADF /* WorldQuery.h */,
 				86BC7EB516518D4600D96ADF /* WorldQueryFilter.h */,
@@ -3278,6 +3283,7 @@
 				2AB4C19F16DE9F0600B02479 /* PickingSceneController.cc in Sources */,
 				2AB4C1A316DE9F1100B02479 /* AmbientForceController.cc in Sources */,
 				2ACF5A2816E52D4B00F838D9 /* SpriteBatchQuery.cc in Sources */,
+				8B8B948316EEF83400EAFBE0 /* SceneEventManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

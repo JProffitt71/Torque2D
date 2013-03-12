@@ -29,6 +29,7 @@
 #include "io/fileStream.h"
 #include "io/fileObject.h"
 #include "console/consoleTypeValidators.h"
+#include "2d/scene/SceneEventManager.h"
 
 //-----------------------------------------------------------------------------
 
@@ -121,7 +122,10 @@ void SimObject::unregisterObject()
    // messages
    if (getGroup())
       getGroup()->removeObject(this);
-
+    
+    // Delete pending scene events
+    SceneEventManager::cancelPendingEvents(this);
+    
    processDeleteNotifies();
 
    // Do removals from the Sim.

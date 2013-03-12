@@ -56,6 +56,10 @@
 #include "2d/core/particleSystem.h"
 #endif
 
+#ifndef _SCENEEVENTMANAGER_H_
+#include "2d/scene/SceneEventManager.h"
+#endif
+
 // Script bindings.
 #include "Scene_ScriptBinding.h"
 
@@ -312,7 +316,10 @@ bool Scene::onAdd()
 
     // Set loading scene.
     Scene::LoadingScene = this;
-
+    
+    // Generate a scene event queue
+    new SceneEventManager::SceneGraphEventQueue(this);
+    
     // Tell the scripts
     Con::executef(this, 1, "onAdd");
 
@@ -842,7 +849,10 @@ void Scene::processTick( void )
 
         // Update scene time.
         mSceneTime += Tickable::smTickSec;
-
+        
+        // Advance scene events.
+        SceneEventManager::advanceToTime(this, mSceneTime);
+        
         // Clear ticked scene objects.
         mTickedSceneObjects.clear();
 
